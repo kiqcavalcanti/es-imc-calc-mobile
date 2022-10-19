@@ -2,6 +2,10 @@ import React from "react"
 import { Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function LoginForm(props: any) {
+
+    const { navigation } = props;
+
+
     return <View style={styles.container}>
         <View style={styles.fields}>
             <View style={styles.filler}></View>
@@ -36,7 +40,7 @@ export default function LoginForm(props: any) {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.createAccountLink}
-                onPress={() => alert('Cadastrar minha conta...')}
+                onPress={() => navigation.navigate('CreateAccount')}
             >
                 <Text style={styles.accountActionText}>
                     Criar minha conta

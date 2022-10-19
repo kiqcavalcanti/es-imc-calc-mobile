@@ -7,6 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import AccountPage from './components/account/Page'
 
 function Home(props) {
   const { navigation } = props;
@@ -35,6 +36,7 @@ export default function App() {
             }}>
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="CreateAccount" component={AccountPage} />
           </Stack.Navigator>
         </NavigationContainer>
         <StatusBar style="auto" />
